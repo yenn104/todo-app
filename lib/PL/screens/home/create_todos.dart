@@ -30,7 +30,7 @@ class CreateTodos extends StatelessWidget {
           padding: const EdgeInsets.all(20),
           children: [
             const Text(
-              "Tiêu đề",
+              "Công việc",
               style: TextStyle(
                 fontSize: 16,
                 color: TheColors.white,
@@ -44,7 +44,7 @@ class CreateTodos extends StatelessWidget {
             theTextField(
               context: context,
               controller: theTaskController,
-              hintText: "Nhập ghi chú",
+              hintText: "Nhập nội dung..",
             ),
 
             const SizedBox(height: 10),
