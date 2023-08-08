@@ -1,8 +1,5 @@
 import 'dart:convert';
-
-import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
-
 import '../entities/todo.dart';
 
 class TodoRepository {
@@ -12,16 +9,15 @@ class TodoRepository {
     if (response.statusCode == 200) {
       var json = jsonDecode(response.body);
       List todos = json['todos'];
-
       return todos.map((todo) => Todo.fromJson(todo)).toList();
     }
-
     return [];
   }
 
 
   Future<Todo> getTodoById({required int id}) async {
     final res = await http.get(Uri.parse('https://dummyjson.com/todos/$id'));
+
     if (res.statusCode == 200) {
       var json = jsonDecode(res.body);
       return Todo.fromJson(json);
@@ -91,3 +87,4 @@ class TodoRepository {
     );
   }
 }
+

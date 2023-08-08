@@ -36,18 +36,15 @@ class CreateTodos extends StatelessWidget {
                 color: TheColors.white,
               ),
             ),
-            const SizedBox(height: 10),
-            /*
-             * theTextField is a widget that I created in the widgets folder
-             * to make the code more readable and reusable
-             */
+            const SizedBox(height: 15),
             theTextField(
               context: context,
               controller: theTaskController,
               hintText: "Nhập nội dung..",
+              //keyboardType: TextInputType.text,
+              keyboardType: TextInputType.multiline,
             ),
-
-            const SizedBox(height: 10),
+            const SizedBox(height: 30),
             CupertinoButton(
               color: TheColors.secondary,
               child: const Text(

@@ -44,10 +44,10 @@ class Home extends StatelessWidget {
             },
             tabs: const [
               Tab(
-                icon: Icon(Icons.pending),
+                icon: Icon(Icons.pending_outlined),
               ),
               Tab(
-                icon: Icon(Icons.add_task),
+                icon: Icon(Icons.done_all_outlined),
               ),
             ],
           ),

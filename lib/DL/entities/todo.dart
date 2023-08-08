@@ -37,11 +37,11 @@ class Todo extends Equatable {
   }
 
   Map<String, dynamic> toJson() => {
-        'id': id,
-        'userId': userId,
-        'todo': todo,
-        'completed': isCompleted,
-      };
+    'id': id,
+    'userId': userId,
+    'todo': todo,
+    'completed': isCompleted,
+  };
 
   @override
   List<Object?> get props => [id, userId, isCompleted];

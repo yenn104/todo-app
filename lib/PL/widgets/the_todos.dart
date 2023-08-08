@@ -56,12 +56,6 @@ BlocConsumer<TodosFilterBloc, TodosFilterState> theTodos(String title) {
                       ),
                       child: ListTile(
                         title: Text(
-                          state.filteredTodos[i].id.toString(),
-                          style: const TextStyle(
-                            color: TheColors.white,
-                          ),
-                        ),
-                        subtitle: Text(
                           state.filteredTodos[i].todo,
                           style: const TextStyle(
                             color: TheColors.white,
@@ -78,8 +72,17 @@ BlocConsumer<TodosFilterBloc, TodosFilterState> theTodos(String title) {
                               ),
                             );
                           },
-                          child: const Icon(
-                            Icons.add_task,
+                          // child: const Icon(
+                          //   Icons.add_task,
+                          //   color: TheColors.white,
+                          // ),
+                          child: state.filteredTodos[i].isCompleted!
+                              ? const Icon(
+                            Icons.check_circle,
+                            color: TheColors.white,
+                          )
+                              : const Icon(
+                            Icons.check_circle_outline,
                             color: TheColors.white,
                           ),
                         ),

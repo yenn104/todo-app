@@ -7,11 +7,11 @@ import '../../utils/the_colors.dart';
  * theTextField is a widget that I created in the widgets folder
  * to make the code more readable and reusable
  */
-Widget theTextField({context, controller, hintText}) {
+Widget theTextField({context, controller, hintText, required TextInputType keyboardType}) {
   return TextField(
     controller: controller,
     onChanged: (value) {},
-    textAlign: TextAlign.right,
+    textAlign: TextAlign.left,
     style: const TextStyle(
       color: TheColors.deepWhite,
     ),
